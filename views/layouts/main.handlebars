@@ -4,25 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
+  <title>Total Tech Blog</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
+    <header class="display-flex align-center p-2">
+      <h1 class="mx-3">
+        <a href="/">Home</a>
+      </h1>
+      <h1 class="mx-3">
+        <a href="/dashboard">Dashboard</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <h4>
+          <button class="no-button" id="logout">Logout</button>
+        </h4>
         {{else}}
-        <a href="/login">login</a>
+        <h4>
+          <a href="/login">Login</a>
+        </h4>
         {{/if}}
       </nav>
     </header>
@@ -31,7 +36,7 @@
       {{{ body }}}
     </main>
     <footer>
-      
+
     </footer>
   </div>
 

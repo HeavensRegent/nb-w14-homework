@@ -1,0 +1,30 @@
+<div class="text-center">
+  <h2>{{title}} <a href="/blog/post/{{id}}">Edit Post</a></h2>
+  <p>{{content}}</p>
+  <p>Created by {{user.name}} on {{format_date createdAt}}</p>
+  <hr />
+  <div class="row">
+    <div class="col-md-8">
+      <textarea class="form-input" type="text" id="comment">
+      </textarea>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-sm post-comment" data-id="{{id}}" data-user-id="{{userId}}">Post Comment</button>
+    </div>
+  </div>
+  <div class="comment-list">
+    {{#each comments as |comment|}}
+    <div class="row mx-auto">
+      <div class="col-md-8">
+        <p>{{comment.comment}}</p>
+        <p>Commented by {{comment.user.name}} on {{format_date comment.createdAt}}</p>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-sm btn-danger" data-id="{{comment.id}}">X</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<script src="/js/comment.js" />

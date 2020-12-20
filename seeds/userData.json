@@ -1,17 +1,17 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345"
+    "name": "hulu",
+    "email": "hulu@hotmail.com",
+    "password": "testtest"
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "name": "netflix",
+    "email": "netflix@gmail.com",
+    "password": "testtest"
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "name": "hbo",
+    "email": "hbo@aol.com",
+    "password": "testtest"
   }
 ]

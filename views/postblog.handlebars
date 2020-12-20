@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-6 mx-auto user" id={{userId}}>
+    <h2>{{#if new}}Create New{{else}} Update {{/if}} Blog Post </h2>
+
+    <form class="form blog-post blog" id={{id}}>
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input class="form-input" type="text" id="title" value="{{title}}" />
+      </div>
+      <div class="form-group">
+        <label for="content">Content:</label>
+        <textarea class="form-input" type="text" id="content">{{#if id}}{{content}}{{/if}}</textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">{{#if new}}Save New{{else}} Update {{/if}} Blog Post</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/blog.js"></script>
