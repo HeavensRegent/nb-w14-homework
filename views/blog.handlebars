@@ -5,21 +5,21 @@
   <hr />
   <div class="row">
     <div class="col-md-8">
-      <textarea class="form-input" type="text" id="comment">
+      <textarea class="form-textarea w-100" type="text" id="comment">
       </textarea>
     </div>
     <div class="col-md-2">
       <button class="btn btn-sm post-comment" data-id="{{id}}" data-user-id="{{userId}}">Post Comment</button>
     </div>
   </div>
-  <div class="comment-list">
+  <div class="comment-list mt-5">
     {{#each comments as |comment|}}
-    <div class="row mx-auto">
+    <div class="row mx-auto card text-justify">
       <div class="col-md-8">
         <p>{{comment.comment}}</p>
-        <p>Commented by {{comment.user.name}} on {{format_date comment.createdAt}}</p>
+        <small>Commented by {{comment.user.name}} on {{format_date comment.createdAt}}</small>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2 text-center my-auto">
         <button class="btn btn-sm btn-danger" data-id="{{comment.id}}">X</button>
       </div>
     </div>

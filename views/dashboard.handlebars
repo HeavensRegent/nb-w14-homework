@@ -5,12 +5,12 @@
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
+  <div class="col-md-3">
     <h3><a href="/blog/post/new">Create a New Post</a></h3>
   </div>
 
   {{#if blogs.length}}
-  <div class="col-md-6 project-list">
+  <div class="col-md-9 project-list">
     {{#each blogs as |blog| }}
     <div class="row mb-4 project">
       <div class="col-md-4">
@@ -20,12 +20,12 @@
         </h2>
         <p>Created by {{blog.user.name}} on {{format_date blog.createdAt}}</p>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-7 my-auto">
         <p>
           {{blog.content}}
         </p>
       </div>
-      <div class="col-md-1">
+      <div class="col-md-1 my-auto">
         <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
       </div>
     </div>
