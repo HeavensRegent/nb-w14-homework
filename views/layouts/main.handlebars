@@ -11,32 +11,36 @@
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex align-center p-2">
+    <header class="display-flex align-center p-2 bg-primary">
       <div class="col-md-12">
         <div class="row">
-          <h1 class="mx-3">
-            <a href="/">Home</a>
-          </h1>
-          <h1 class="mx-3">
-            <a href="/dashboard">Dashboard</a>
-          </h1>
-          <nav>
-            <!-- Conditionally render login or logout links -->
-            {{#if logged_in}}
-            <h4>
-              <button class="no-button" id="logout">Logout</button>
-            </h4>
-            {{else}}
-            <h4>
-              <a href="/login">Login</a>
-            </h4>
-            {{/if}}
-          </nav>
+          <div class="col-md-6 flex-row">
+            <h1 class="mx-3">
+              <a href="/">Home</a>
+            </h1>
+            <h1 class="mx-3">
+              <a href="/dashboard">Dashboard</a>
+            </h1>
+          </div>
+          <div class="col-md-6 text-right">
+            <nav>
+              <!-- Conditionally render login or logout links -->
+              {{#if logged_in}}
+              <h4>
+                <button class="no-button" id="logout">Logout</button>
+              </h4>
+              {{else}}
+              <h4>
+                <a href="/login">Login</a>
+              </h4>
+              {{/if}}
+            </nav>
+          </div>
         </div>
-        <div class="row text-center">
+        <div class="row text-center text-white">
           <div class="col-md-10 mx-auto text-center">
             <h1>Total Tech Blog</h1>
-          </div>"
+          </div>
         </div>
       </div>
     </header>

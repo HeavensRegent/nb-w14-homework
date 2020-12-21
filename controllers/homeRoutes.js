@@ -44,15 +44,12 @@ router.get('/blog/:id', withAuth, async (req, res) => {
 
     const blog = blogData.get({ plain: true });
 
-    console.log(blog);
-
     res.render('blog', {
       ...blog,
       logged_in: req.session.logged_in,
       userId: req.session.user_id,
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -68,8 +65,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    console.log(user);
-
     res.render('dashboard', {
       ...user,
       logged_in: true,
@@ -80,7 +75,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
 });
 
 router.get('/blog/post/:id', withAuth, async (req, res) => {
-  console.log(req.params.id);
   if (req.params.id === 'new')
     res.render('postblog', {
       logged_in: req.session.logged_in,
@@ -102,8 +96,6 @@ router.get('/blog/post/:id', withAuth, async (req, res) => {
     });
 
     const blog = blogData.get({ plain: true });
-
-    console.log(blog);
 
     res.render('postblog', {
       ...blog,

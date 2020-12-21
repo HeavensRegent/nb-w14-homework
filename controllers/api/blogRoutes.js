@@ -11,7 +11,6 @@ router.post('/', withAuth, async (req, res) => {
 
     res.status(200).json(newBlog);
   } catch (err) {
-    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -32,7 +31,6 @@ router.put('/:id', withAuth, async (req, res) => {
 
     res.status(200).json(blog);
   } catch (err) {
-    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -52,7 +50,6 @@ router.delete('/:id', withAuth, async (req, res) => {
 
     res.status(200).json(blogData);
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
