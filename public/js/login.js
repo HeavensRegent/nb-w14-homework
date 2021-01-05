@@ -13,11 +13,13 @@ const loginFormHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
 
+    const loginResponse = await response.json();
+
     if (response.ok) {
       // If successful, redirect the browser to the profile page
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      alert(loginResponse.message);
     }
   }
 };
